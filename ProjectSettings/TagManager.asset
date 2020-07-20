@@ -11,6 +11,7 @@ TagManager:
   - Danger_Object
   - Puzzle
   - Ball
+  - Start_Button
   layers:
   - Default
   - TransparentFX

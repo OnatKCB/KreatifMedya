@@ -16,6 +16,7 @@ public class Puzzle_Manager : MonoBehaviour
     GameObject Obstacle;
     GameObject Ball;
     GameObject Danger;
+    Button startButton;
     //----------------------------------------//
     //[SerializeField]
     //int level;
@@ -62,23 +63,32 @@ public class Puzzle_Manager : MonoBehaviour
     //----------------------//
 
     UI_Menu uimenu;
+    GoogleMobileAdsScript ads;
 
     //----------------------//
 
 
+    void Awake()
+    {
+        Puzzle = GameObject.FindGameObjectWithTag("Puzzle");
+        Obstacle = GameObject.FindGameObjectWithTag("Obstacle");
+        Ball = GameObject.FindGameObjectWithTag("Ball");
+        Danger = GameObject.FindGameObjectWithTag("Danger_Object");
+
+    }
     void Start()
     {
-        newPuzzle();
+        //newPuzzle();
         //puzzleLoop();
         PlayerPrefs.SetInt("Score", score);
         ScoreText.text = score.ToString();
         totalScoreText.text = PlayerPrefs.GetInt("Total Score", 0).ToString();
         ScoreText.text = score.ToString();
-        Puzzle = GameObject.FindGameObjectWithTag("Puzzle");
-        Obstacle = GameObject.FindGameObjectWithTag("Obstacle");
-        Ball = GameObject.FindGameObjectWithTag("Ball");
-        Danger = GameObject.FindGameObjectWithTag("Danger_Object");
+        
+        //startButton.transform.Find("Start_Button");
         uimenu = (UI_Menu)FindObjectOfType(typeof(UI_Menu));
+        ads = (GoogleMobileAdsScript)FindObjectOfType(typeof(GoogleMobileAdsScript));
+
         //gameads = (GameADS)FindObjectOfType(typeof(GameADS));
         //gameads.RequestBanner();
     }
@@ -103,6 +113,7 @@ public class Puzzle_Manager : MonoBehaviour
         thePuzzleBody = Instantiate(puzzleBodies[0]);
         thePuzzleObstacle = Instantiate(puzzleObstacles[0]);
         thePuzzleDanger = Instantiate(puzzleDangers[0]);
+        //startButton.gameObject.SetActive(true);
     }
     public void nextPuzzle() 
     {
@@ -118,6 +129,7 @@ public class Puzzle_Manager : MonoBehaviour
         thePuzzleObstacle = Instantiate(puzzleObstacles[randomPuzzleObstacle]);
         thePuzzleDanger = Instantiate(puzzleDangers[randomPuzzleDanger]);
         totalScoreText.text = score.ToString();
+        //startButton.gameObject.SetActive(true);
         //levelText.text = level.ToString();
     }
     public void Succeed()
@@ -152,7 +164,9 @@ public class Puzzle_Manager : MonoBehaviour
         score = 0;
         //level = 0;
         uimenu.EndTheGame();
+        ads.GameOver();
         //gameads.GameOver();
         //endgamepanel.setactive(true);
+        //startButton.gameObject.SetActive(false);
     }
 }

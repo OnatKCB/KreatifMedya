@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds", "GoogleMobileAds.csproj", "{30E26A4C-9EE3-04EC-85EE-D46BFB91DD0D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{60226179-1295-3AE3-21EE-5962C52D570A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMobileAds.Editor", "GoogleMobileAds.Editor.csproj", "{41E7672B-4A2D-0414-7BA8-924684DC5D44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30E26A4C-9EE3-04EC-85EE-D46BFB91DD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E26A4C-9EE3-04EC-85EE-D46BFB91DD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E26A4C-9EE3-04EC-85EE-D46BFB91DD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E26A4C-9EE3-04EC-85EE-D46BFB91DD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60226179-1295-3AE3-21EE-5962C52D570A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{60226179-1295-3AE3-21EE-5962C52D570A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60226179-1295-3AE3-21EE-5962C52D570A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60226179-1295-3AE3-21EE-5962C52D570A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E7672B-4A2D-0414-7BA8-924684DC5D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E7672B-4A2D-0414-7BA8-924684DC5D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E7672B-4A2D-0414-7BA8-924684DC5D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E7672B-4A2D-0414-7BA8-924684DC5D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
